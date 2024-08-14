@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 1 - PINFO</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="toolbar.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 60px; /* Height of header */
+            margin-bottom: 60px; /* Height of footer */
+            padding: 0 20px;
+        }
+
+        .active-link {
+            background-color: #f9e8c4; /* Orange background */
+            border: 2px solid black;  /* Black border */
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 80px; /* 60 px below the toolbar */
+            right: -60px; /* 60 px to the right */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .toolbar {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 10px;
+            width: calc(100% - 60px); /* Slightly less wide to leave some void */
+            max-width: 1100px; /* Max width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .details-text {
+            background-color: #f9e8c4; /* Orange background */
+            border: 2px solid black;  /* Black border */
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PINFO</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="site-details">
+        <div class="container" style="height: 700px; width: 985px;">
+                <iframe src="http://localhost:3000/terrain1/property" width="100%" height="100%" style="border:none;"></iframe>
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Contact Us: <a href="mailto:info@pinfo.ai">info@pinfo.ai</a></p>
+        </div>
+    </footer>
+    <script>
+        function showDetails(event, section) {
+            event.preventDefault();
+            const detailsText = document.getElementById('details-text');
+            const images = {
+                details: 'images/site_01_image_02_details.png',
+                googleEarthView: 'images/site_01_image_03_googleearthview.png',
+                renderView: 'images/site_01_image_04_renderView.png',
+                sunLightPath: 'images/site_01_image_05_sunLightPath.png',
+                topography: 'images/site_01_image_06_topography.png'
+            };
+            
+            if (section === 'details') {
+                detailsText.style.display = detailsText.style.display === 'none' ? 'block' : 'none';
+            } else {
+                detailsText.style.display = 'none';
+            }
+            document.getElementById('site-image').src = images[section];
+
+            // Remove active class from all links
+            document.querySelectorAll('.sidebar a').forEach(link => {
+                link.classList.remove('active-link');
+            });
+
+            // Add active class to the clicked link
+            document.getElementById(section + '-link').classList.add('active-link');
+        }
+    </script>
+</body>
+</html>

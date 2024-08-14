@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PINFO</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #6D6D6D;
+        }
+
+        .hero {
+            background-image: url('images/01.png');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .section {
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section img {
+            max-width: 800px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .section .content {
+            max-width: 327px;
+            text-align: left;
+            flex: 1;
+        }
+
+        .centered-paragraph {
+            text-align: center;
+            max-width: 987px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            flex: 1;
+            max-width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .cta:hover {
+            background-color: #0056b3;
+        }
+
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .overlay-container {
+            position: relative;
+            width: 612px;
+            margin: 0 auto;
+        }
+
+        .overlay-container img {
+            width: 100%;
+        }
+
+        .overlay-container .overlay-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 212px;
+
+        }
+
+        .content-centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content-centered p {
+            max-width: 500px;
+        }
+
+        .left {
+            order: 1;
+            margin-right: 20px;
+        }
+
+        .right {
+            order: 2;
+            margin-left: 20px;
+        }
+
+        .section:nth-child(odd) .content {
+            order: 1;
+        }
+
+        .section:nth-child(odd) img {
+            order: 2;
+            margin-left: 20px;
+        }
+
+        .section:nth-child(even) .content {
+            order: 2;
+        }
+
+        .section:nth-child(even) img {
+            order: 1;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PINFO</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero"></div>
+        <section class="section">
+            <div class="content">
+                <h2>Meet Pinfo.ai</h2>
+                <p class="centered-paragraph">PINFO combines a multi-petabyte catalog of satellite imagery and geospatial datasets with a vast database of property listings and market data. Our advanced AI analyzes properties for sale and provides personalized recommendations based on user preferences. PINFO empowers everyday investors to understand, visualize, and compare all relevant information about potential investment sites, making informed decisions easier than ever.</p>
+                <div class="centered-image">
+                    <img src="images/02.png" alt="Satellite Image" class="left">
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>Examine Investment Opportunities Without Leaving Your Desk</h2>
+                <p>Save time with automated market analysis. View high-resolution property details, explore potential investments and dive into comprehensive market insights with PINFO’s AI analysis.</p>
+                <p>Launch PINFO</p>
+                <p>Visualize & Understand your Options</p>
+            </div>
+            <div class="section">
+                <img src="images/03.png">
+            </div>
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>Visualize the Potential According to Zoning Regulations</h2>
+                <p>Using geospatial coordinates, a volume is generated based on zoning regulations. Then, AI will create a render so you can visualize your future investment.</p>
+                <p>Download PINFO in Apple App Store</p>
+                <p>Download PINFO in Google Play Store</p>
+            </div>
+            <img src="images/04.png" alt="Third Section Image" class="left">
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>Understand the Natural Considerations</h2>
+                <p>Understand the orientation of your site, identifying both good and bad orientations. The price of the site varies according to this, making it crucial for you to comprehend. Additionally, consider the site's topography and slope.</p>
+            </div>
+            <img src="images/05.png" alt="Fourth Section Image" class="right">
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>Get Familiar with the Context of Your Site</h2>
+                <p>PINFO shows nearby amenities and their travel times, site accessibility, and future urban developments that could impact your site's future value.</p>
+            </div>
+            <img src="images/06.png" alt="Fifth Section Image" class="left">
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>Make Informed Decisions with Accurate Data</h2>
+                <p>Understand the financial aspects of the site and its legal history. Identify any restrictions on the site and determine the necessary permits. Visualize key economic indicators such as inflation, taxes, and GDP growth, as well as the site's sales history.</p>
+            </div>
+            <img src="images/07.png" alt="Sixth Section Image" class="right">
+        </section>
+        <footer>
+            <div class="container">
+                <p>Contact Us: <a href="mailto:info@pinfo.ai">info@pinfo.ai</a></p>
+            </div>
+        </footer>
+</body>
+</html>
